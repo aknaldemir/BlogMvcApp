@@ -9,6 +9,6 @@ namespace Blog.Dal.Abstract
 {
     public interface ICategoryRepository : IEntityRepository<Category>
     {
-
+        void CustomFunctionForCategory();
     }
 }

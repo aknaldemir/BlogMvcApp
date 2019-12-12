@@ -5,9 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Blog.Entities.Concrete;
 
-namespace Blog.Dal.Abstract
+namespace Blog.Bll.Abstract
 {
-    public interface IArticleRepository:IEntityRepository<Article>
+    public interface ICategoryManager
     {
+        List<Category> GetAllCategories();
     }
 }

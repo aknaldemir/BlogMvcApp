@@ -14,6 +14,8 @@ namespace Blog.Entities.Concrete
         public string CommentText { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }
+        public int NewsId { get; set; }
+        public News News { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public DateTime? DeletedDate { get; set; }

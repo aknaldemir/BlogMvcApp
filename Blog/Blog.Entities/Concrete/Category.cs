@@ -11,7 +11,7 @@ namespace Blog.Entities.Concrete
     {
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
-        public ICollection<Article> Articles { get; set; }
+        public ICollection<News> NewsList { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public DateTime? DeletedDate { get; set; }

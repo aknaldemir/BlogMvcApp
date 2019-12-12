@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Blog.Bll
+namespace Blog.Entities.Concrete
 {
-    public class Class1
+    public enum Role
     {
+        Admin,
+        User,
+        Editor
     }
 }
