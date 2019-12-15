@@ -20,12 +20,12 @@ namespace Blog.Bll.Concrete
 
         public News GetById(int id)
         {
-            throw new NotImplementedException();
+            return _newsRepository.GetById(id);
         }
 
         public List<News> GetAll()
         {
-            return _newsRepository.GetAll(null);
+            return _newsRepository.GetAll().ToList();
         }
 
         public void Create(News entity)
@@ -41,6 +41,11 @@ namespace Blog.Bll.Concrete
         public void Delete(News entity)
         {
             throw new NotImplementedException();
+        }
+
+        public List<News> GetNewsWithCategory()
+        {
+            return _newsRepository.GetNewsWithCategory().ToList();
         }
     }
 }

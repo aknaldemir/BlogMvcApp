@@ -9,5 +9,6 @@ namespace Blog.Dal.Abstract
 {
     public interface INewsRepository:IEntityRepository<News>
     {
+        IQueryable<News> GetNewsWithCategory();
     }
 }

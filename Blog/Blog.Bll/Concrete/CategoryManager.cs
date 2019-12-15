@@ -20,7 +20,7 @@ namespace Blog.Bll.Concrete
         }
         public List<Category> GetAllCategories()
         {
-            return _categoryRepository.GetAll();
+            return _categoryRepository.GetAll().ToList();
         }
 
     }

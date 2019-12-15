@@ -97,6 +97,9 @@
     <Content Include="newsbit\04_FAQs.html" />
     <Content Include="newsbit\05_FAQs-single.html" />
     <Content Include="newsbit\06_contact-us.html" />
+    <Content Include="newsbit\common\owl.carousel.css" />
+    <Content Include="newsbit\common\owl.carousel.js" />
+    <Content Include="newsbit\common\owl.transitions.css" />
     <Content Include="newsbit\common\scripts.js" />
     <Content Include="newsbit\common\styles.css" />
     <Content Include="newsbit\fonts\ionicons.css" />
@@ -289,6 +292,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Models\NewsCategoryModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -423,9 +429,13 @@
     <Content Include="node_modules\bootstrap\scss\_type.scss" />
     <Content Include="node_modules\bootstrap\scss\_utilities.scss" />
     <Content Include="node_modules\bootstrap\scss\_variables.scss" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\_AdminLayout.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -435,6 +445,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

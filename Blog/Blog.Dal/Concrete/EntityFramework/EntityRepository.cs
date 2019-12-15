@@ -30,20 +30,20 @@ namespace Blog.Dal.Concrete.EntityFramework
             _context.SaveChanges();
         }
 
-        public TEntity Get(Expression<Func<TEntity, bool>> filter)
+        public TEntity GetById(int id)
         {
-           return _context.Set<TEntity>().FirstOrDefault(filter);
+            return _context.Set<TEntity>().Find(id);
         }
 
-        public List<TEntity> GetAll(Expression<Func<TEntity, bool>> filter = null)
+        public IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>> filter = null)
         {
             if (filter==null)
             {
-                return _context.Set<TEntity>().ToList();
+                return _context.Set<TEntity>();
             }
             else
             {
-                return _context.Set<TEntity>().Where(filter).ToList();
+                return _context.Set<TEntity>().Where(filter);
             }
 
             //return filter==null ? _context.Set<TEntity>().ToList() : _context.Set<TEntity>().Where(filter).ToList();

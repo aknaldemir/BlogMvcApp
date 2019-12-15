@@ -1,0 +1,62 @@
+﻿@using Blog.Entities.Concrete;
+@model List<News>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered table-info table-responsive">
+    <thead>
+        <tr>
+            <th>Kategori Adı</th>
+            <th>Resim</th>
+            <th>Haber Title</th>
+            <th>Onay</th>
+            <th>Anasayfa</th>
+            <th>Slider</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var news in Model)
+        {
+            <tr>
+                <td>@news.Category.CategoryName</td>
+                <td>@news.NewsImage</td>
+                <td>@news.NewsTitle</td>
+                <td>
+                    @if (news.IsApproved)
+                    {
+                        <i class="fas fa-check-circle"></i>
+                    }
+                    else
+                    {
+                        <i class="fas fa-times-circle"></i>
+                    }
+                </td>
+                <td>
+                    @if (news.IsHome)
+                    {
+                        <i class="fas fa-check-circle"></i>
+                    }
+                    else
+                    {
+                        <i class="fas fa-times-circle"></i>
+                    }
+                </td>
+                <td>
+                    @if (news.IsSlider)
+                    {
+                        <i class="fas fa-check-circle"></i>
+                    }
+                    else
+                    {
+                        <i class="fas fa-times-circle"></i>
+                    }
+                </td>
+            </tr>
+
+        }
+    </tbody>
+
+</table>
+

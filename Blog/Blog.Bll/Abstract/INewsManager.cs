@@ -9,5 +9,6 @@ namespace Blog.Bll.Abstract
 {
     public interface INewsManager:IEntityManager<News>
     {
+        List<News> GetNewsWithCategory();
     }
 }
